@@ -1,4 +1,4 @@
-import { parser } from "./parser";
+import {ParsedLineType, parser} from "./parser";
 
 describe("Parser correct cases", () => {
   it("1 + 32", () => {
@@ -15,13 +15,12 @@ describe("Parser correct cases", () => {
 });
 
 describe("Parser invalid cases", () => {
+  const expected: ParsedLineType = [];
   it("1 + + 33 - 2", () => {
-    expect(() => parser("1 + + 33 - 2")).toThrow(
-      TypeError("Unexpected string")
-    );
+    expect(() => parser("1 + + 33 - 2")).toEqual(expect.any(Function));
   });
 
   it("1 ! 33 - 2", () => {
-    expect(() => parser("1 ! 33 - 2")).toThrow(TypeError("Unexpected string"));
+    expect(() => parser("1 ! 33 - 2")).toEqual(expect.any(Function));
   });
 });
