@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nickovchinnikov/react-js-tutorial.git"
+    "url": "git+https://github.com/PavelRodikov/ReactOtus.git"
   },
-  "author": "Nick Ovchinnikov",
+  "author": "Pavel Rodikov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nickovchinnikov/react-js-tutorial/issues"
+    "url": "https://github.com/PavelRodikov/ReactOtus/issues"
   },
-  "homepage": "https://github.com/nickovchinnikov/react-js-tutorial#readme",
+  "homepage": "https://github.com/PavelRodikov/ReactOtus#readme",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
