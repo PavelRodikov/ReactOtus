@@ -14,7 +14,7 @@ const question = (): Promise<null> =>
 
       if (result) {
         console.log(`Result: ${result}`);
-      }else{
+      } else {
         console.log(`Bad operation`);
       }
 

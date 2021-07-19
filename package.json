@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack --mode production",
-    "calc": "npx ts-node src/lesson2",
-    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
-    "test": "npx jest",
-    "check": "npm test && npm run lint",
-    "debug": "npx ts-node src/lesson2 TS_NODE_DEBUG"
+    "build": "webpack --mode production",
+    "calc": "ts-node src/lesson2",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix ./",
+    "test": "jest",
+    "check": "test && npm run lint",
+    "debug": "ts-node src/lesson2 TS_NODE_DEBUG"
   },
   "husky": {
     "hooks": {
