@@ -1,7 +1,35 @@
-import React from "react";
+import React, { FC } from "react";
 import ReactDOM from "react-dom";
 
-const HelloWorld = () => <h1>Hello world!</h1>;
+interface FullNameProps{
+    name : string;
+    surname : string;
+    showSurname? : boolean;
+}
 
-ReactDOM.render(<HelloWorld />,document.getElementById('root'));
+export interface LevelProps{
+    optionNames:string[];
+}
 
+const FullName: FC<FullNameProps> = (props) => <h2>{props.name} {props.showSurname && props.surname}</h2>;
+
+export const Select: FC<LevelProps> = ({optionNames}) => (
+    <select >
+        {optionNames.map((item:string) => (
+            <option key={item} value={item}>
+                {item}
+            </option>
+            )
+        )}
+    </select>
+);
+
+const HelloWorld = () => (
+    <div>
+        <h1>Hello <FullName showSurname name="Pavel" surname="Rodikov"/>!</h1>
+        <Select optionNames={["admin","user","maintainer"]}></Select>
+    </div>
+
+);
+
+ReactDOM.render(<HelloWorld />, document.getElementById("root"));
