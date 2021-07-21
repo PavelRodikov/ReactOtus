@@ -3,7 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: "./src/lesson5/index.tsx",
   devtool: "source-map",
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
@@ -23,11 +23,12 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    disableHostCheck: true
+    open: true,
+    host: '127.0.0.1'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/lesson5/index.html",
     }),
   ],
 };

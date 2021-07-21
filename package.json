@@ -10,7 +10,7 @@
     "test": "jest",
     "check": "test && npm run lint",
     "debug": "ts-node src/lesson2 TS_NODE_DEBUG",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6007",
     "build-storybook": "build-storybook",
     "start": "webpack serve --mode=development"
   },
@@ -39,6 +39,9 @@
     "@storybook/addon-essentials": "^6.3.4",
     "@storybook/addon-links": "^6.3.4",
     "@storybook/react": "^6.3.4",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.3.4",
+    "@storybook/manager-webpack5": "^6.3.4",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
