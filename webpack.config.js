@@ -3,10 +3,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/lesson5/index.tsx",
+  entry: "./src/index.tsx",
   devtool: "source-map",
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+    alias: {
+      '@' : path.resolve((__dirname, 'src')),
+    }
   },
   output: {
     path: path.join(__dirname, "/dist"),
@@ -19,6 +22,10 @@ module.exports = {
         loader: "babel-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      }
     ],
   },
   devServer: {
@@ -28,7 +35,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/lesson5/index.html",
+      template: "./src/index.html",
     }),
   ],
 };
