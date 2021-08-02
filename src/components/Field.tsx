@@ -13,7 +13,7 @@ export const Field : FC<FieldProps> = ({countCell}) =>
                 <tr key={indexRow}>
                     {[...Array(countCell)].map((item, indexCell) =>
                         <td key={indexCell}>
-                            <Cell coordinates={[indexCell,indexRow]} onClick={(coordinates)=>console.log(coordinates)} children={(indexRow*countCell)+indexCell+1} />
+                            <Cell coordinates={[indexCell,indexRow]} children={(indexRow*countCell)+indexCell+1} />
                         </td>
                     )}
                 </tr>

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import ReactDOM from "react-dom";
 import {Field} from "./components/Field";
-
+/*
 interface FullNameProps{
     name : string;
     surname : string;
@@ -32,9 +32,9 @@ const HelloWorld = () => (
     </div>
 
 );
-
-const Test = () => (
+*/
+const MyField = () => (
     <Field countCell={5}></Field>
 )
 
-ReactDOM.render(<Test />, document.getElementById("root"));
+ReactDOM.render(<MyField />, document.getElementById("root"));
