@@ -37,4 +37,6 @@ type Order =
       fullfillmentDate: Date;
     };
 
-export const getOrderState = (order: Order): Order["state"] => order.state;
+type OrderState = Order["state"];
+
+export const getOrderState = (order: Order): OrderState => order.state;

@@ -8,8 +8,8 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
     alias: {
-      '@' : path.resolve((__dirname, 'src')),
-    }
+      "@": path.resolve((__dirname, "src")),
+    },
   },
   output: {
     path: path.join(__dirname, "/dist"),
@@ -24,14 +24,14 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      }
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   devServer: {
     historyApiFallback: true,
     open: true,
-    host: '127.0.0.1'
+    host: "127.0.0.1",
   },
   plugins: [
     new HtmlWebpackPlugin({
